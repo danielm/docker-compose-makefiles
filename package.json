@@ -1,0 +1,25 @@
+{
+  "name": "docker-compose-makefiles",
+  "version": "1.0.0",
+  "description": "How tu use Makefiles and Docker",
+  "main": "src/index.js",
+  "scripts": {
+    "docker:dev": "node --inspect src/index.js",
+    "docker:prod": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielm/docker-compose-makefiles.git"
+  },
+  "keywords": [
+    "docker",
+    "makefile",
+    "compose"
+  ],
+  "author": "Daniel Morales <daniel85mg@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielm/docker-compose-makefiles/issues"
+  },
+  "homepage": "https://github.com/danielm/docker-compose-makefiles#readme"
+}

@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: ./
+    image: "${DOCKER_REPOSITORY}/${PROJECT_NAME}:${TAG_VERSION}"
+    restart: unless-stopped
+    container_name: web-${ENV:-development}
+    environment:
+      - "NODE_ENV=${ENV:-development}"
+
