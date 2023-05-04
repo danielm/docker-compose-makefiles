@@ -4,15 +4,9 @@ include .env
 # Export them all
 export $(shell sed 's/#.*//g; /^$/d; s/=.*//' .env)
 
-# Define the list of environments to deploy
-ENVIRONMENTS := development production
-
 # For versioning
 TAG_VERSION ?= $(shell git log --format="%h" -n 1)
 export TAG_VERSION := $(TAG_VERSION)
-
-# Targets
-.PHONY: $(ENVIRONMENTS)
 
 # Pattern rule to build environment-specific containers
 build:
