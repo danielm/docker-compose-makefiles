@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  web:
+  app:
     build:
       target: production
-    command: npm run docker:prod
+    command: npm run docker:production
 

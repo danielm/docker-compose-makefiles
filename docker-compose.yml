@@ -1,12 +1,12 @@
 version: '3'
 
 services:
-  web:
+  app:
     build:
       context: ./
-    image: "${DOCKER_REPOSITORY}/${PROJECT_NAME}:${TAG_VERSION}"
-    restart: unless-stopped
-    container_name: web-${ENV:-development}
+    image: "${DOCKER_REPOSITORY}/${PROJECT_NAME}:${TAG_VERSION}-${ENVIRONMENT:-development}"
+    container_name: app-${ENVIRONMENT:-development}
     environment:
-      - "NODE_ENV=${ENV:-development}"
+      - "NODE_ENV=${ENVIRONMENT:-development}"
+      - "TAG_VERSION=${TAG_VERSION:-development}"
 

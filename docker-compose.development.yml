@@ -1,10 +1,10 @@
 version: '3'
 
 services:
-  web:
+  app:
     build:
       target: development
-    command: npm run docker:dev
+    command: npm run docker:development
     volumes:
       - .:/app
 
