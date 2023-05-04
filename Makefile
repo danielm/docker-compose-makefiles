@@ -7,6 +7,7 @@ DOCKER_REPOSITORY ?= username
 # Name your project
 PROJECT_NAME ?= hola-mundo
 
+# For versioning
 TAG_VERSION ?= $(shell git log --format="%h" -n 1)
 
 # --
