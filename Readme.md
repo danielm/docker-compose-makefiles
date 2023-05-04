@@ -18,6 +18,8 @@ All are ran using the `environment` set in the `.env file`
 - `make up`
 - `make down`
 - `make logs`
+- `make push`
+- `make release`
 
 ## ToDo
 - Publish to registry/hub

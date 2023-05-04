@@ -22,3 +22,10 @@ down:
 logs:
 	docker compose -f docker-compose.yml -f docker-compose.$(ENVIRONMENT).yml logs -f
 
+push:
+	docker push ${DOCKER_REPOSITORY}/${PROJECT_NAME}:${TAG_VERSION}-${ENVIRONMENT}
+
+release:
+	docker tag ${DOCKER_REPOSITORY}/${PROJECT_NAME}:${TAG_VERSION}-${ENVIRONMENT} ${DOCKER_REPOSITORY}/${PROJECT_NAME}:latest
+	docker push ${DOCKER_REPOSITORY}/${PROJECT_NAME}:latest
+
